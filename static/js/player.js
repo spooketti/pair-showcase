@@ -2,11 +2,16 @@ class player
 {
     constructor(startX,startY,startRotation,color)
     {
+
+        //the diff between rotation and direction is direction is the left forward and right turning
+        //rotation is the global rotation
+
         this.x = startX
         this.y = startY
-        this.direction = startRotation;
+        this.rotation = startRotation;
+        this.direction = 0; 
         this.color = color
-        this.magnitude
+        this.magnitude = 1;
     }
     // 0, 1, 2, 3, 4, 5, 6, 7,  from top going clockwise
     move(direction, magnitude){
