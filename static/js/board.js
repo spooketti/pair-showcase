@@ -21,7 +21,12 @@ matrix[P2StartData[0]][P2StartData[1]] = 0.2
 matrix[EndPos[0]][EndPos[1]] = 0.3
 let playerOne = new player()
 let playerTwo = new player()
-
+// let playerList = [playerOne,playerTwo]
+// let isPlayerTwoTurn = false
+// let playerTurnDict = {
+//     true: 0,
+//     false: 1
+// }
 
 let colorDict = {
     0:"#ffffff",
@@ -54,7 +59,6 @@ function drawBoard()
         {
             ctx.clearRect((x*boxDim)+1,(y*boxDim)+1,boxDim-2,boxDim-2)
             ctx.fillStyle = colorDict[matrix[y][x]]
-            console.log(colorDict[matrix[y][x]])
             ctx.fillRect((x * boxDim) + 1, (y * boxDim) + 1, boxDim-2, boxDim-2)
             if(matrix[y][x] == 0.1 || matrix[y][x] == 0.2)
             {
@@ -62,27 +66,6 @@ function drawBoard()
                 ctx.font = boxDim+"px Arial"
                 ctx.fillText("S",(x*boxDim)+(boxDim/8),(y*boxDim)+boxDim-2)
             }
-            /*
-            switch(matrix[y][x])
-            {
-                case 0.1:
-                    ctx.fillStyle = "#FF474C"
-                    ctx.fillRect((y * boxDim) + 1, (x * boxDim) + 1, boxDim-2, boxDim-2)
-                break;
-
-                case 0.2:
-
-                break;
-
-                case 1:
-                
-                break;
-
-                case 2:
-
-                break;
-            }
-            */
         }
     }
 }
